@@ -73,12 +73,12 @@ function Popup() {
                     <input type="range" id="points" name="points" min="0" max={width} onChange={horiz => PopHoriz(horiz.target.value)}  disabled={!height}/>
                 </div>
             </div>
-            <button id="popup-create" className="mt-40" onClick={setLocalStorage}>CREATE</button>
+            <button id="popup-create" className="mt-40" onClick={setLocalStorage}>Add Popup List</button>
             <div className="flex" id="content">
                 {
                     width ? 
                     <div id="popup" className="mt-140" style={{width: + width + "px", height: + height + "px", backgroundColor: popBgColor, position: "relative"}} >
-                     <span  style={{position: "absolute", left: horizontalTitle + "px"}}> { title ? title : "Title"}</span>
+                    <span  style={{position: "absolute", left: horizontalTitle + "px"}}> { title ? title : "Title"}</span>
                     </div> 
                     : 
                     <></>
