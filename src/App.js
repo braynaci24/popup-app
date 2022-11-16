@@ -1,4 +1,6 @@
 import "./style/base.css"
+import "./style/utility.css"
+
 import { Toaster } from "react-hot-toast";
 import {
   BrowserRouter,
@@ -6,11 +8,14 @@ import {
   Route,
 } from "react-router-dom";
 import Login from './pages/Login';
-import Dashoard from "./pages/Dashboard"
-
+import PopupList from "./pages/PopupList"
+import Popup from "./pages/Popup";
+import Libarary from "./pages/Libarary";
+import Settings from "./pages/Settings";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
-    <>
+    <div>
      <BrowserRouter>
       <Routes>
         <Route path="/" element={
@@ -20,17 +25,38 @@ function App() {
           </>
         }>
         </Route>
-        <Route path="/dashboard" element={
+        <Route path="/PopupList" element={
           <>
-            <Dashoard />
+            <Sidebar />
+            <PopupList />
           </>
         }>
-
+        </Route>
+        <Route path="/popup" element={
+          <>
+            <Sidebar />
+            <Popup />
+          </>
+        }>
+        </Route>
+        <Route path="/libarary" element={
+          <>
+            <Sidebar />
+            <Libarary />
+          </>
+        }>
+        </Route>
+        <Route path="/settings" element={
+          <>
+            <Sidebar />
+            <Settings />
+          </>
+        }>
         </Route>
       </Routes>
       </BrowserRouter>
      
-    </>
+    </div>
   );
 }
 
