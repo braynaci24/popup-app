@@ -111,11 +111,4 @@
 .inline-block{display: inline-block;}
 .inline-flex{display: inline-flex;}
 .none{display: none;}
-
-
-/* Title Position*/
-
-.position-top-left{left: 20px; top: 20px;}
-.position-top-right {right: 20px; top: 20px;}
-.position-center-center { display: flex; justify-content: center; align-items: center; top: 0; left: 0; right:0; bottom: 0;}
-.position-bottom-left {left: 20px; bottom: 20px;}
+.grid {display: grid; grid-template-columns: auto auto auto; gap: 20px;}

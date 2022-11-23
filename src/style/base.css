@@ -105,6 +105,9 @@ input[type=number] {
   margin-left: 15%;
   padding: 50px;
 }
+.component-container #popup-controller {
+  width: 100%;
+}
 .component-container #popup-controller .popup-admin-input {
   border: 1px solid #cdd6d9;
   height: 30px;
@@ -139,6 +142,26 @@ input[type=number] {
 }
 
 /* POPUP PAGE */
+/* POPUP LIST */
+.popup-list-container table {
+  border-collapse: collapse;
+}
+.popup-list-container table td, .popup-list-container table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.popup-list-container table .table-item-title {
+  width: 70%;
+}
+.popup-list-container table .table-item-creation-date {
+  width: 30%;
+}
+.popup-list-container table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* POPUP LIST */
 @media (max-width: 1024px) {
   .base .login-card {
     padding: 70px;

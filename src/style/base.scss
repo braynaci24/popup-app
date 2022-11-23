@@ -121,6 +121,7 @@ input[type=number] {
     margin-left: 15%;
     padding: 50px;
     #popup-controller {
+        width: 100%;
         .popup-admin-input {
             border: 1px solid #cdd6d9;
             height: 30px;
@@ -159,6 +160,34 @@ input[type=number] {
 
 
 /* POPUP PAGE */
+
+
+/* POPUP LIST */
+.popup-list-container {
+    table {
+        border-collapse: collapse;
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        .table-item-title {
+            width: 70%;
+        }
+        .table-item-creation-date {
+            width: 30%;
+        }
+          tr:nth-child(even) {
+            background-color: #dddddd;
+          }
+      }
+      
+      
+      
+      
+}
+
+/* POPUP LIST */
 
 @media(max-width: 1024px) {
     .base {
