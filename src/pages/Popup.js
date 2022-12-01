@@ -11,6 +11,7 @@ function Popup() {
     const [popBgColor, setColor] = useState("black");
     const [horizontalTitle, setHorizontalTitle] = useState();
     const [verticalTitle, setVerticalTitle] = useState();
+    const [status, setStatus] = useState("Active")
 
     function PopupWidth (popWidth){
         if(popWidth > 500){
@@ -18,6 +19,11 @@ function Popup() {
             setWidth(0)
         }else
             setWidth(popWidth)
+    }
+
+    function PopupStatus (status){
+        setStatus(status)
+        console.log("sds")
     }
 
     function PopupHeight (popHeight){
@@ -54,6 +60,8 @@ function Popup() {
           (day<10 ? '0' : '') + day;
       
         let pop = {
+            id: storagePopup.length +1,
+            status: status,
             width: width,
             height: height,
             title: title,
@@ -105,6 +113,13 @@ function Popup() {
                 <div className="flex">
                     <span className="mr-10">Title Position Vertical</span>
                     <input type="range" id="points" name="points" min="0" max={height - 20} onChange={vertical => PopVertical(vertical.target.value)}  disabled={!height}/>
+                </div>
+                <div className="flex">
+                    <span className="mr-10">Popup Status</span>
+                    <select onChange={status => PopupStatus(status.target.value)}>
+                        <option>Active</option>
+                        <option>Passive</option>
+                    </select>
                 </div>
             </div>
             <button id="popup-create" className="mt-40" onClick={setLocalStorage}>Add Popup List</button>

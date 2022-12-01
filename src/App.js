@@ -13,6 +13,7 @@ import Popup from "./pages/Popup";
 import Libarary from "./pages/Libarary";
 import Settings from "./pages/Settings";
 import Sidebar from "./components/Sidebar";
+import PopupEdit from "./pages/PopupEdit";
 function App() {
   return (
     <div>
@@ -50,6 +51,14 @@ function App() {
           <>
             <Sidebar />
             <Settings />
+          </>
+        }>
+        </Route>
+        <Route path={`/PopupList/popup/:PopupId`}element={
+          <>
+            <Sidebar />
+            <Libarary />
+            <PopupEdit />
           </>
         }>
         </Route>
