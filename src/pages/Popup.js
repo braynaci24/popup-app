@@ -18,7 +18,7 @@ function Popup() {
             toast.error("Length must be less than 1200")
             setWidth(0)
         }else
-            setWidth(popWidth)
+            setWidth(Number(popWidth))
     }
 
     function PopupStatus (status){

@@ -26,9 +26,6 @@ function PopupList() {
           <tr key={index}>
             <td>
               { item.title ? item.title : "Title"}
-              {/* <div id="popup" ref={(ele)=> refs.current[index] = ele} className="mt-140 mr-40" style={{  display: currentPopup != index ? "none" : "block" , width: + item.width + "px", height: + item.height + "px", backgroundColor: item.bgColor, position: "absolute", margin: "0 auto", left: "0", right: "0"}} >
-                  <span style={{position: "absolute", left: item.titleAlignmet ? item.titleAlignmet + "px" : 44 + "%", color: item.titleColor, top: item.titleVerticalAlignmet + "px"}}> { item.title ? item.title : "Title"}</span>
-              </div> */}
             </td>
             <td>
               {item.creationDate}
