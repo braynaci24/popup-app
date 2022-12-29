@@ -15,9 +15,10 @@ function PopupEdit() {
 
     const newEditItem = () => {
         const newState = data.map(item => {
+          console.log(item)
           if (item.id === Number(PopupId)) {
-            return {...item, width: newWidth, height: newHeight, title: newTitle, color: newColor, titleColor: newTitleColor, titleVerticalAlignmet: newTitlePostHorz,
-                    titleHorizAlignmet:newTitlePosVert};
+            return {...item, width: newWidth ? newWidth : item.width, height: newHeight ? newHeight : item.height, title: item.title ? item.title : newTitle, color: newColor, titleColor: newTitleColor, titleVerticalAlignmet: item.titleVerticalAlignmet ? item.titleVerticalAlignmet : newTitlePostHorz,
+                    titleHorizAlignmet: item.titleAlignmet ? item.titleAlignmet : newTitlePosVert};
           }
           return item;
         });
