@@ -23,7 +23,6 @@ function Popup() {
 
     function PopupStatus (status){
         setStatus(status)
-        console.log("sds")
     }
 
     function PopupHeight (popHeight){
